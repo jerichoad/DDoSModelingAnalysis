@@ -36,6 +36,6 @@ new_count_df = (_time, source, connection_count) #count # date #source
 
 print(new_count_df)
 from statsmodels.tsa.seasonal import seasonal_decompose
-result = seasonal_decompose(new_count_df.NewTime, model='additive')
+result = seasonal_decompose(new_count_df, model='additive')
 result.plot()
 pyplot.show()
